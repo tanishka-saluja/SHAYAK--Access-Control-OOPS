@@ -1,30 +1,12 @@
-class CreditScorer {
+public class EducationPolicy {
 
-    public static int calculateScore(WomanEntrepreneur w) {
-        int score = 0;
+    public static int getEducationPoints(String education) {
 
-        // Base financial criteria
-        if (w.getIncome() >= 10000) score += 30;
-        if (w.getBusinessYears() >= 2) score += 20;
-
-        // Education-based preference (transparent)
-        switch (w.getEducationLevel().toLowerCase()) {
-            case "postgraduate":
-                score += 25;
-                break;
-            case "graduate":
-                score += 20;
-                break;
-            case "diploma":
-                score += 15;
-                break;
-            case "school":
-                score += 10;
-                break;
-            default:
-                score += 5;
+        switch (education.toLowerCase()) {
+            case "postgraduate": return 30;
+            case "graduate": return 20;
+            case "12th": return 10;
+            default: return 5;
         }
-
-        return score;
     }
 }
