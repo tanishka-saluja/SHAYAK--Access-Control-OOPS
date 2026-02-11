@@ -27,6 +27,27 @@ Programming (Java) to ensure:
 - Handling and logging invalid access attempts
 - Eliminates intermediary manipulation
 
+## System Architecture
+SAHAYAK-Access-Control-OOPS
+│
+├── src
+│   ├── User.java
+│   ├── WomanEntrepreneur.java
+│   ├── Verifier.java
+│   ├── BankVerifier.java
+│   ├── UnauthorizedUser.java
+│   ├── Loan.java
+│   ├── CreditScorer.java
+│   ├── AuditLogger.java
+│   ├── AccessController.java
+│   └── SahayakSystem.java
+│
+├── leaderboard
+│   └── leaderboard.js
+│
+├── README.md
+└── .gitignore
+
 ## How to Run
 ```bash
 javac src/*.java
