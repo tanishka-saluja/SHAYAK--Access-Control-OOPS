@@ -7,6 +7,7 @@ public class Grievance {
     }
 
     public void register() {
+
         DigitalLedger.log("Complaint Registered: " + complaint);
         System.out.println("Grievance Submitted Successfully.");
     }
