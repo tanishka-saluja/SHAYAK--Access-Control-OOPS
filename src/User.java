@@ -1,13 +1,15 @@
-abstract class User {
-    protected String userId;
-    protected String role;
+public abstract class User {
+    protected String id;
+    protected String name;
 
-    public User(String userId, String role) {
-        this.userId = userId;
-        this.role = role;
+    public User(String id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
-    public String getRole() {
-        return role;
+    public String getId() {
+        return id;
     }
+    public string getName(){
+        return name;
 }
