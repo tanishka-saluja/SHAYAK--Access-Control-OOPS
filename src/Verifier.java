@@ -1,4 +1,4 @@
 public interface Verifier {
 
-    void verify(WomanEntrepreneur user, Loan loan);
+    void verify(User user, Loan loan);
 }
