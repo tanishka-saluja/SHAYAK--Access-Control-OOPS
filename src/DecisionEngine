@@ -1,0 +1,20 @@
+public class DecisionEngine {
+
+    public static void evaluate(WomanEntrepreneur user, Loan loan) {
+
+        int score = EligibilityEngine.calculateScore(user);
+
+        System.out.println("Applicant Score: " + score);
+        System.out.println("Minimum Required Score: 60");
+
+        if (EligibilityEngine.isEligible(score)) {
+            loan.setStatus("APPROVED");
+            System.out.println("Reason: Meets standardized criteria.");
+        } else {
+            loan.setStatus("REJECTED");
+            System.out.println("Reason: Score below required threshold.");
+        }
+
+        DigitalLedger.log("Loan processed for " + user.getId() + " Status: " + loan.getStatus());
+    }
+}
