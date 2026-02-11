@@ -1,30 +1,21 @@
-class CreditScorer {
+class AccessController {
 
-    public static int calculateScore(WomanEntrepreneur w) {
-        int score = 0;
+    public static void processLoan(Verifier verifier, WomanEntrepreneur w, Loan loan) {
 
-        // Base financial criteria
-        if (w.getIncome() >= 10000) score += 30;
-        if (w.getBusinessYears() >= 2) score += 20;
-
-        // Education-based preference (transparent)
-        switch (w.getEducationLevel().toLowerCase()) {
-            case "postgraduate":
-                score += 25;
-                break;
-            case "graduate":
-                score += 20;
-                break;
-            case "diploma":
-                score += 15;
-                break;
-            case "school":
-                score += 10;
-                break;
-            default:
-                score += 5;
+        if (!verifier.isAuthorized()) {
+            AuditLogger.log(verifier.userId, "UNAUTHORIZED ACCESS ATTEMPT");
+            System.out.println("Access Denied ");
+            return;
         }
 
-        return score;
+        int score = CreditScorer.calculateScore(w);
+
+        if (score >= 60) {
+            loan.approve();
+            AuditLogger.log(verifier.userId, "Loan Approved | Score: " + score);
+        } else {
+            loan.reject();
+            AuditLogger.log(verifier.userId, "Loan Rejected | Score: " + score);
+        }
     }
 }
