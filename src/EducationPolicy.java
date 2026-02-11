@@ -1,0 +1,12 @@
+public class EducationPolicy {
+
+    public static int getEducationPoints(String education) {
+
+        switch (education.toLowerCase()) {
+            case "postgraduate": return 30;
+            case "graduate": return 20;
+            case "12th": return 10;
+            default: return 5;
+        }
+    }
+}
