@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+
+public class DigitalLedger {
+
+    static ArrayList<String> records = new ArrayList<>();
+
+    public static void log(String entry) {
+        records.add(entry);
+    }
+
+    public static void showRecords() {
+        System.out.println("---- Digital Records ----");
+        for (String r : records) {
+            System.out.println(r);
+        }
+    }
+}
