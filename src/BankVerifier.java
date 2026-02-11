@@ -1,11 +1,17 @@
-class BankVerifier extends Verifier {
+public class BankVerifier implements Verifier {
 
-    public BankVerifier(String id) {
-        super(id, "AUTHORIZED_VERIFIER");
+    private String officerId;
+
+    public BankVerifier(String officerId) {
+        this.officerId = officerId;
     }
 
     @Override
-    public boolean isAuthorized() {
-        return true;
+    public void verify(WomanEntrepreneur user, Loan loan) {
+
+        System.out.println("Bank Officer ID: " + officerId);
+        System.out.println("Verifying loan using standardized system...");
+
+        DecisionEngine.evaluate(user, loan);
     }
 }
