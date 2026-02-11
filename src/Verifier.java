@@ -1,8 +1,4 @@
-abstract class Verifier extends User {
+public interface Verifier {
 
-    public Verifier(String id, String role) {
-        super(id, role);
-    }
-
-    public abstract boolean isAuthorized();
+    void verify(WomanEntrepreneur user, Loan loan);
 }
