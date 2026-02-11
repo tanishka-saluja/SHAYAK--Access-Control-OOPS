@@ -11,7 +11,7 @@ public class LoanPolicy {
 
         System.out.println("---- Loan Terms ----");
         System.out.println("Interest Rate: 12%");
-        System.out.println("Penalty Rate: 2% for delay");
+        System.out.println("Penalty Rate: 2%");
         System.out.println("Total Payable: " + total);
         System.out.println("Monthly EMI: " + emi);
     }
