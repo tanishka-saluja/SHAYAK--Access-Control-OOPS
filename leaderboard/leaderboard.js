@@ -9,7 +9,7 @@ const women = [
 women.sort((a, b) => b.score - a.score);
 
 // Display leaderboard
-console.log("🏆 Women Empowerment Leaderboard\n");
+console.log(" Women Empowerment Leaderboard\n");
 
 women.forEach((w, index) => {
   console.log(
