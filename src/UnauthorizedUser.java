@@ -1,11 +1,10 @@
-class UnauthorizedUser extends Verifier {
+class UnauthorizedUser extends User {
 
-    public UnauthorizedUser(String id) {
-        super(id, "UNAUTHORIZED");
+    public UnauthorizedUser(String id, String name) {
+        super(id, name);
     }
 
-    @Override
-    public boolean isAuthorized() {
-        return false;
+    public void accessDenied(){
+        System.out.println("Access Denied.");
     }
 }
