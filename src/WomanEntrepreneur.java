@@ -1,24 +1,29 @@
-class WomanEntrepreneur extends User {
-    private double income;
-    private int businessYears;
-    private String educationLevel; 
+public class WomanEntrepreneur extends User {
 
-    public WomanEntrepreneur(String id, double income, int years, String educationLevel) {
-        super(id, "APPLICANT");
-        this.income = income;
-        this.businessYears = years;
-        this.educationLevel = educationLevel;
+    private double monthlyIncome;
+    private int yearsInBusiness;
+    private String education;
+
+    public WomanEntrepreneur(String id, String name,
+                              double monthlyIncome,
+                              int yearsInBusiness,
+                              String education) {
+
+        super(id, name);
+        this.monthlyIncome = monthlyIncome;
+        this.yearsInBusiness = yearsInBusiness;
+        this.education = education;
     }
 
-    public double getIncome() {
-        return income;
+    public double getMonthlyIncome() {
+        return monthlyIncome;
     }
 
-    public int getBusinessYears() {
-        return businessYears;
+    public int getYearsInBusiness() {
+        return yearsInBusiness;
     }
 
-    public String getEducationLevel() {
-        return educationLevel;
+    public String getEducation() {
+        return education;
     }
 }
