@@ -1,12 +1,9 @@
-class Loan {
-    private String status = "PENDING";
+public class Loan {
+    private String status;
 
-    public void approve() {
-        status = "APPROVED";
-    }
 
-    public void reject() {
-        status = "REJECTED";
+    public void setStatus(String status) {
+        this.status=status;
     }
 
     public String getStatus() {
