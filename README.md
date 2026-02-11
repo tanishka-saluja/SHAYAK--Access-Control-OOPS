@@ -28,25 +28,38 @@ Programming (Java) to ensure:
 - Eliminates intermediary manipulation
 
 ## System Architecture
-SAHAYAK-Access-Control-OOPS
+Sahayak-System/
 │
-├── src
-│   ├── User.java
-│   ├── WomanEntrepreneur.java
-│   ├── Verifier.java
-│   ├── BankVerifier.java
-│   ├── UnauthorizedUser.java
-│   ├── Loan.java
-│   ├── CreditScorer.java
-│   ├── AuditLogger.java
-│   ├── AccessController.java
-│   └── SahayakSystem.java
+├── src/
+│   │
+│   ├── SahayakSystem.java        → Main entry point
+│   │
+│   ├── User.java                 → Abstract base user
+│   ├── WomanEntrepreneur.java    → Applicant entity
+│   ├── UnauthorizedUser.java     → Access restriction
+│   │
+│   ├── Verifier.java             → Interface (Abstraction)
+│   ├── BankVerifier.java         → Implements Verifier
+│   ├── AccessController.java     → Controls access flow
+│   │
+│   ├── CreditScorer.java         → AI-style scoring engine
+│   ├── EligibilityEngine.java    → Standardized threshold logic
+│   ├── DecisionEngine.java       → Final approval decision
+│   │
+│   ├── Loan.java                 → Loan object
+│   ├── LoanPolicy.java           → Interest + EMI transparency
+│   │
+│   ├── EducationPolicy.java      → Education weight mapping
+│   │
+│   ├── DigitalLedger.java        → Stores digital records
+│   ├── AuditLogger.java          → Audit trail logging
+│   │
+│   ├── Grievance.java            → Complaint system
+│   │
+│   └── LanguageSupport.java      → Multi-language support
 │
-├── leaderboard
-│   └── leaderboard.js
-│
-├── README.md
-└── .gitignore
+└── README.md                     → Project documentation
+
 
 ## How to Run
 ```bash
