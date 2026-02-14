@@ -1,5 +1,5 @@
 
-# SAHAYAK – Access Controlled Micro-Loan System (OOPS)
+# SAHAYAK – Access Controlled Micro-Loan System 
 
 ## Problem Statement
 Women entrepreneurs like Lakshmi face biased and non-transparent micro-loan approval
